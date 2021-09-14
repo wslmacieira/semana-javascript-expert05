@@ -113,7 +113,7 @@ describe('#UploadHandler test suite', () => {
     })
 
     test('given message timerDelay as 2secs it should emit only two message during 2 seconds period', async () => {
-      jest.spyOn(ioObj, ioObj.emit.name)
+      jest.spyOn(ioObj, 'emit')
 
       const day = '2021-07-01 01:01'
       const twoSecondsPeriod = 2000

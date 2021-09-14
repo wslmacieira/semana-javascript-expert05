@@ -4,9 +4,8 @@ import { Readable, Transform, Writable } from 'stream'
 export default class TestUtil {
 
   static mockDateNow(mockImplementationPeriods) {
-    console.log(mockImplementationPeriods);
 
-    const now = jest.spyOn(global.Date, global.Date.now.name)
+    const now = jest.spyOn(global.Date, 'now')
 
     mockImplementationPeriods.forEach(time => {
       now.mockReturnValueOnce(time)
